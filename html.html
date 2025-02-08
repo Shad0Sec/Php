@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: black;
+            background-size: cover;
+            font-family: 'Cairo', Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #39FF14;
+            text-shadow: 0 0 20px #39FF14, 0 0 40px #39FF14;
+            animation: glow 1.5s infinite alternate;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 300px;
+            border: 4px solid #39FF14;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #39FF14;
+            margin-bottom: 20px;
+            animation: zoom 5s ease-in-out infinite;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #bbb;
+            text-shadow: 0 0 10px #39FF14;
+            margin: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #bbb;
+            text-shadow: 0 0 15px #39FF14;
+            font-style: italic;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        footer:hover {
+            transform: scale(1.1);
+            color: #FF5733;
+        }
+
+        .lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .lines span {
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 100%;
+            background: #39FF14;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #39FF14;
+            }
+            100% {
+                text-shadow: 0 0 40px #39FF14;
+            }
+        }
+
+        @keyframes zoom {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+
+        .lines span:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .lines span:nth-child(2) { left: 30%; animation-delay: 1s; }
+        .lines span:nth-child(3) { left: 50%; animation-delay: 2s; }
+        .lines span:nth-child(4) { left: 70%; animation-delay: 3s; }
+        .lines span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            img {
+                max-width: 200px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <img src="photo_2024-11-24_00-53-27.jpg" alt="صورة تعبيرية">
+        <h1>you have been hacked</h1>
+        <h2>By Shad0Sec</h2>
+        <footer>SUDAN - RUSSIA</footer>
+    </div>
+</body>
+</html>
